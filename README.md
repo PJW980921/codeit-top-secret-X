@@ -13,78 +13,7 @@
   <a href="https://github.com/sozign/codeit-top-secret-X/wiki"><p>wiki 바로가기🔗</p></a>
 </div>
 
-<br/>
 
-# 팀원 소개 & 역할
-<table>
-  <tbody>
-    <tr>
-      <td align="center"><a href="https://github.com/Useong0"><img src="https://github.com/sozign/codeit-top-secret-X/assets/86371724/b78d9d7c-56ea-42cb-8701-8c9c3fb2fbc7" width="128px;" alt=""/><br /><sub><b>박운성</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/PJW980921"><img src="https://github.com/sozign/codeit-top-secret-X/assets/124119421/ee39bc37-5825-4b4f-8831-ed814b019129" width="128px;" alt=""/><br /><sub><b>박지원</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/sozign"><img src="https://github.com/sozign/codeit-top-secret-X/assets/114739219/328b8ddb-4811-4d44-880c-973e53c92537" width="128px;" alt=""/><br /><sub><b>안소연</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/hyun522"><img src="https://github.com/sozign/codeit-top-secret-X/assets/134246845/035ad426-6511-45de-bf3b-d89129c743a5" width="128px;" alt=""/><br /><sub><b>정현진</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/JIS0098"><img src="https://github.com/sozign/codeit-top-secret-X/assets/114739219/3816c811-e11d-41fa-af8d-dd82a4a4825d" width="128px;" alt=""/><br /><sub><b>한지수</b></sub></a><br /></td>
-    </tr>
-  </tbody>
-</table>
-
-
-<br>
-
-  ### 박운성<br>
-- landing, dashboard/{boardId}/edit Page ui 제작<br>
-- 페이지네이션 기반 초대 기록, 구성원 조회 및 삭제 기능 구현<br>
-- Modal 관련 공통 컴포넌트 제작<br>
-  (Modal Layout, ConfirmModal)
-- 컬럼 추가 모달 제작 <br>
-- 전체 api, api 관련 type 추가<br>
-
-### 박지원<br>
-- login, signup Page ui 제작<br>
-- react-hook-form 기반 회원가입, 로그인 기능 구현<br>
-- Auth 관련 유효성 검사, debounce 적용<br>
-- Auth 관련 동적 에러 메세지 모달 제작<br>
-- 각 페이지의 Header 공통 컴포넌트 제작<br>
-
-### 안소연<br>
-- 프로젝트 및 레포 셋팅<br>
-- 브랜치 전략 문서화<br>
-- dashboard/{boardId} Page ui 제작
-- 무한스크롤 기반 컬럼 조회 기능 구현
-- 카드 추가, 수정 및 멤버 외 접근 제한 모달 제작
-- 아바타, 태그 컴포넌트 랜덤한 배경 지정 기능 구현
-- react-hook-form 기반 Input, SideBar 공통 컴포넌트 제작 <br>
-  (FormInput, TagInput, AuthInput)<br>
-
-### 정현진<br>
-- react-select 기반 드롭다운 컴포넌트 구현<br>
-- mypage Page ui 제작<br>
-- react-hook-form 기반 form 제작<br>
-- input 값 기반 버튼 활성화 기능 구현 및 관련 모달 제작<br>
-- 프로필 이미지 upload 및 preview 기능 구현
-
-### 한지수<br>
-- mydashboard Page  ui 제작<br>
-- 페이지네이션 기반 대시보드 조회 기능 구현<br>
-- 무한스크롤 기반 초대 조회 및 수락, 거절 및 검색 기능 구현<br>
-- 검색 관련 debounce, 로딩ui 적용<br>
-- Button, Chip 관련 공통 컴포넌트 제작<br>
-- 로딩 관련 커스텀 훅, 로딩 ui 추가<br>
-
-<br>
-
-# 목차
-### 1. [프로젝트 소개](#프로젝트-소개)
-   + 주요기능
-   + 프로젝트 실행방법
-### 2. [프로젝트 구성](#프로젝트-구성)
-  + 기술 스택
-  + Directory 구조
-
-### 3. [트러블 슈팅](#트러블-슈팅)
-
-    
-    
 <br/>
 
 # 프로젝트 소개
@@ -194,10 +123,6 @@ src
  ┃ ┃ ┣ Headers
  ┃ ┃ ┣ Input
  ┃ ┃ ┣ spinner
- ┃ ┃ ┣ Avatar.tsx
- ┃ ┃ ┣ PageLayout.tsx
- ┃ ┃ ┣ SideBar.tsx
- ┃ ┃ ┗ SideBarPagination.tsx
  ┃ ┣ domains
  ┃ ┃ ┣ dashboard
  ┃ ┃ ┣ edit
@@ -206,42 +131,20 @@ src
  ┃ ┣ modal
  ┃ ┗ myPage
  ┣ constants
- ┃ ┣ types.ts
- ┃ ┗ validation.ts
  ┣ context
- ┃ ┣ DashboardContext.tsx
- ┃ ┗ UserContext.tsx
  ┣ hooks
- ┃ ┗ useAsync.ts
  ┣ lib
- ┃ ┣ api.ts
- ┃ ┗ axios.ts
  ┣ pages
  ┃ ┣ dashboard
  ┃ ┃ ┗ [boardid]
- ┃ ┃ ┃ ┣ edit.tsx
- ┃ ┃ ┃ ┗ index.tsx
  ┃ ┣ login
- ┃ ┃ ┗ index.tsx
  ┃ ┣ mydashboard
- ┃ ┃ ┗ index.tsx
  ┃ ┣ mypage
- ┃ ┃ ┗ index.tsx
  ┃ ┣ signup
- ┃ ┃ ┗ index.tsx
- ┃ ┣ 404.tsx
- ┃ ┣ index.tsx
- ┃ ┣ _app.tsx
- ┃ ┗ _document.tsx
  ┣ styles
- ┃ ┣ font.js
- ┃ ┗ globals.css
  ┗ utils
-    ┗ stringToNumber.ts
 </pre>
   
 <br>
 
-
-# 트러블 슈팅
-  **<a href="https://almond-year-fc3.notion.site/a341c05392924be5a718da02815d1e30">트러블 슈팅 노션 바로가기🛠</a>**
+  
